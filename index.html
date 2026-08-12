@@ -3,89 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SkillQuest</title>
-    <link rel="stylesheet" href="styleindex.css">
-
+    <title>Quiz Game</title>
+    <link rel="stylesheet" href="style.css">
    
 </head>
-
 <body>
+    <script src="first.js"></script>
+  <!-- Start Screen -->
+    <div id="start-screen">
+        <h1 id="quiz">QUIZ GAME</h1>
 
-    <!-- NAVBAR -->
-    <nav>
-
-        <!-- Replace logo image source below with your own SkillQuest logo -->
-        <div class="logo">
-            <img src="sqlogo.png"
-                 alt="SkillQuest Logo">
-        </div>
-
-        <ul class="nav-links">
-            <li><a href="http://127.0.0.1:5500/SkillQuest/index.html">Home</a></li>
-            <li><a href="##">About</a></li>
-            <li><a href="###">Contact</a></li>
-        </ul>
-
-    </nav>
-
-    <div class="container">
-
-        <h1>Welcome to SkillQuest</h1>
-
-        <p>
-            SkillQuest is designed to help learners strengthen their minds through
-            brain teasers, general knowledge challenges, logical reasoning puzzles,
-            and mathematical thinking. Throughout history, problem-solving and
-            critical thinking have played an important role in innovation,
-            scientific discovery, and everyday decision-making. Our goal is to
-            provide an engaging platform where users can improve analytical
-            abilities while enjoying interactive challenges and quizzes.
+        <p id="welcome">
+            Welcome to the quiz game! Test your knowledge and have fun.
         </p>
 
-        <div class="cards">
-
-            <a href="http://127.0.0.1:5500/SkillQuest/gk.html" class="card">
-                <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600"
-                     alt="General Knowledge">
-                <h3>General Knowledge</h3>
-            </a>
-
-            <a href="http://127.0.0.1:5500/SkillQuest/math.html" class="card">
-                <img src="https://images.unsplash.com/photo-1509228468518-180dd4864904?w=600"
-                      alt="Basic Maths">
-                <h3>Basic Maths</h3>
-            </a>
-
-            <a href="http://127.0.0.1:5500/SkillQuest/reasoning.html" class="card">
-                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600"
-                     alt="Logical Reasoning">
-                <h3>Logical Reasoning</h3>
-            </a>
-
-        </div>
-
+        <button id="button1" onclick="startQuiz()">Start Quiz</button>
     </div>
 
-    <footer>
-    <div class="footer-content">
-        <h3>SkillQuest</h3>
+    <!-- Game Screen -->
 
-        <p>
-            Enhancing learning through interactive quizzes,
-            brain teasers, mathematics, and logical reasoning.
-        </p>
-
-        <div class="footer-links">
-            <a href="http://127.0.0.1:5500/SkillQuest/index.html">Home</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
+      <div id="menu-bar">
+        <button id="menu-button" onclick="toggleMenu()">☰</button>
+        <div id="menu-content">
+          <button id="restart-button" onclick="restartQuiz()">Restart</button>
+          <button id="exit-button" onclick="exitQuiz()">Exit</button>
+        </div>
         </div>
 
-        <p class="copyright">
-            © 2026 SkillQuest | Learn • Think • Solve
-        </p>
-    </div>
-</footer>
+        
+      <div id="lifelines">
+        <button id="lifeline-75-25" onclick="uselifeline7525()">75-25</button>
+        <button id="hint" onclick="useHint()">Hint</button>
+        <button id="memory-challenge" onclick="useMemoryChallenge()">Memory Challenge</button>
+        <button id="glitch" onclick="useGlitch()">Glitch</button>
+      </div>
+    <div id="game-screen">
+        <h2 id="question">This is going to be my question....</h2>
 
- 
+        <div class="allbtn">
+            <button class="btn">Option A</button>
+            <button class="btn">Option B</button>
+            <button class="btn">Option C</button>
+            <button class="btn">Option D</button>
+        </div>
+    </div>
+               
+
+    <footer class="footer">
+        ❤️ Made with love by Varnit ❤️ <br>
+        ©️ 2026 Quiz Game | All Rights Reserved
+    </footer>
+
+</body>
 </html>
