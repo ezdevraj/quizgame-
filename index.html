@@ -5,39 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Game</title>
     <link rel="stylesheet" href="style.css">
-   
 </head>
 <body>
-    <script src="first.js"></script>
-  <!-- Start Screen -->
+
+    <!-- Start Screen -->
     <div id="start-screen">
         <h1 id="quiz">QUIZ GAME</h1>
-
         <p id="welcome">
             Welcome to the quiz game! Test your knowledge and have fun.
         </p>
+        
+        <!-- High Score Display -->
+        <div id="high-score-container">
+            <span id="challenge-tag">⚡ Challenge!</span>
+            <p id="high-score-text">Best Score: 0/0</p>
+        </div>
 
         <button id="button1" onclick="startQuiz()">Start Quiz</button>
     </div>
 
-    <!-- Game Screen -->
-
-      <div id="menu-bar">
-        <button id="menu-button" onclick="toggleMenu()">☰</button>
-        <div id="menu-content">
-          <button id="restart-button" onclick="restartQuiz()">Restart</button>
-          <button id="exit-button" onclick="exitQuiz()">Exit</button>
+    <!-- Menu & Score Bar -->
+    <div id="top-bar">
+        <div id="score-counter">Score: 0/0</div>
+        <div id="menu-bar">
+            <button id="menu-button" onclick="toggleMenu()">☰</button>
+            <div id="menu-content">
+                <button id="restart-button" onclick="restartQuiz()">Restart</button>
+                <button id="exit-button" onclick="exitQuiz()">Exit</button>
+            </div>
         </div>
-        </div>
+    </div>
 
-        
-      <div id="lifelines">
+    <!-- Lifelines -->
+    <div id="lifelines">
         <button id="lifeline-75-25" onclick="uselifeline7525()">75-25</button>
         <button id="hint" onclick="useHint()">Hint</button>
         <button id="memory-challenge" onclick="useMemoryChallenge()">Memory Challenge</button>
         <button id="glitch" onclick="useGlitch()">Glitch</button>
-      </div>
+    </div>
+
+    <!-- Game Screen -->
     <div id="game-screen">
+        <div id="category-badge">Category: General</div>
         <h2 id="question">This is going to be my question....</h2>
 
         <div class="allbtn">
@@ -47,12 +56,23 @@
             <button class="btn">Option D</button>
         </div>
     </div>
-               
+
+    <!-- End Game / Scorecard Popup -->
+    <div id="score-modal">
+        <div class="modal-content">
+            <h2>Quiz Completed! 🎉</h2>
+            <p id="final-score-text">Your Final Score: 0/0</p>
+            <p id="new-high-score-msg"></p>
+            <button onclick="restartQuiz()">Play Again</button>
+            <button onclick="exitQuiz()">Main Menu</button>
+        </div>
+    </div>
 
     <footer class="footer">
         ❤️ Made with love by Varnit ❤️ <br>
         ©️ 2026 Quiz Game | All Rights Reserved
     </footer>
 
+    <script src="first.js"></script>
 </body>
 </html>
